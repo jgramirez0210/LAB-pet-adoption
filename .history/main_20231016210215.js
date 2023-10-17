@@ -1,3 +1,6 @@
+
+
+
 const pets = [
     {
       id: 1,
@@ -85,7 +88,7 @@ const pets = [
       color: "Orange",
       specialSkill: "Can be around food without staring creepily at it.",
       type: "dino",
-      imageUrl: "https://cdn.pixabay.com/photo/2015/02/14/10/16/cat-636172_640.jpg"
+      imageUrl: "http://www.cantref.com/userfiles/events/walking%20dino.jpg?w=600"
     },
     {
       id: 12,
@@ -254,6 +257,6 @@ const pets = [
     </div>
   </div>`;
   }
-  const app = document.querySelector("#app")
+  
   app.innerHTML = domString;
   

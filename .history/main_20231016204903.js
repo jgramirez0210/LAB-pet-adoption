@@ -1,3 +1,6 @@
+
+
+
 const pets = [
     {
       id: 1,
@@ -13,7 +16,7 @@ const pets = [
       color: "Brown",
       specialSkill: "Just picks the tomatoes off of a sandwich instead of requesting a whole new sandwich.",
       type: "dino",
-      imageUrl: "https://media.istockphoto.com/id/1199279669/photo/big-eyed-naughty-obese-cat-behind-the-desk-with-red-hat-grey-color-british-sort-hair-cat.webp?b=1&s=170667a&w=0&k=20&c=ohoTPRNiNT38ItF9sncBQqRXFG0Ra7TS8tnv0ZgWDec=",
+      imageUrl: "http://www.jozilife.co.za/wp-content/uploads/The-Dino-Expo.jpg",
     },
     {
       id: 3,
@@ -61,7 +64,7 @@ const pets = [
       color: "Grey",
       specialSkill: "Comfortable in the outdoors for up to eight hours.",
       type: "dino",
-      imageUrl: "https://i1.pickpik.com/photos/536/869/197/young-cat-cat-cats-pet-preview.jpg"
+      imageUrl: "http://www.theouthousers.com/images/jck//ThanosCopter/news/grumpasaur.jpg"
     },
     {
       id: 9,
@@ -85,7 +88,7 @@ const pets = [
       color: "Orange",
       specialSkill: "Can be around food without staring creepily at it.",
       type: "dino",
-      imageUrl: "https://cdn.pixabay.com/photo/2015/02/14/10/16/cat-636172_640.jpg"
+      imageUrl: "http://www.cantref.com/userfiles/events/walking%20dino.jpg?w=600"
     },
     {
       id: 12,
@@ -240,20 +243,19 @@ const pets = [
       imageUrl: "http://lsae2.iypcdn.com/static//modules/uploads/photos/language1/dino-live-22.jpg?119"
     }
   ];
-  
   let domString = "";
 
   for (let pet of pets) {
     domString += `<div class="card" style="width: 18rem;">
     <div class="card-body">
-    <img src="${pet.imageUrl}" class="card-img-top" alt="...">
       <h5 class="card-title">${pet.name}</h5>
       <h6 class="card-subtitle mb-2 text-body-secondary">${pet.color}</h6>
-      <p class="card-text">${pet.specialSkill}</p>
-      <h6 class="card-subtitle mb-2 text-body-secondary">${pet.type}</h6>
+      <p class="card-text">${special</p>
+      <a href="#" class="card-link">Card link</a>
+      <a href="#" class="card-link">Another link</a>
     </div>
   </div>`;
   }
-  const app = document.querySelector("#app")
+  
   app.innerHTML = domString;
   
