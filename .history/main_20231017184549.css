@@ -9,7 +9,5 @@ body {
 }
 .card {
   width:250px;
-  height: 450px;
-  box-sizing: border-box; 
-  margin: 10px;
+  height: 350px;
 }

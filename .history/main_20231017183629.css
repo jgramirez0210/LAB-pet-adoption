@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  display: flex;
+  
+  
+}
+#app {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+}
