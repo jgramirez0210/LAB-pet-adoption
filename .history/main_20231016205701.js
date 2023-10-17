@@ -1,3 +1,6 @@
+
+
+
 const pets = [
     {
       id: 1,
@@ -61,7 +64,7 @@ const pets = [
       color: "Grey",
       specialSkill: "Comfortable in the outdoors for up to eight hours.",
       type: "dino",
-      imageUrl: "https://i1.pickpik.com/photos/536/869/197/young-cat-cat-cats-pet-preview.jpg"
+      imageUrl: "http://www.theouthousers.com/images/jck//ThanosCopter/news/grumpasaur.jpg"
     },
     {
       id: 9,
@@ -85,7 +88,7 @@ const pets = [
       color: "Orange",
       specialSkill: "Can be around food without staring creepily at it.",
       type: "dino",
-      imageUrl: "https://cdn.pixabay.com/photo/2015/02/14/10/16/cat-636172_640.jpg"
+      imageUrl: "http://www.cantref.com/userfiles/events/walking%20dino.jpg?w=600"
     },
     {
       id: 12,
@@ -254,6 +257,6 @@ const pets = [
     </div>
   </div>`;
   }
-  const app = document.querySelector("#app")
+  
   app.innerHTML = domString;
   

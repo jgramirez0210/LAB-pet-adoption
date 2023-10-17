@@ -1,3 +1,6 @@
+
+
+
 const pets = [
     {
       id: 1,
@@ -254,6 +257,6 @@ const pets = [
     </div>
   </div>`;
   }
-  const app = document.querySelector("#app")
-  app.innerHTML = domString;
   
+  constyapp.innerHTML = domString;
+  console.log(app.value)
