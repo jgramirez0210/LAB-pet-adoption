@@ -6,10 +6,5 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-}
-.card {
-  width:250px;
-  height: 450px;
-  box-sizing: border-box; 
-  margin: 10px;
+  height: 200vh;
 }
