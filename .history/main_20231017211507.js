@@ -242,6 +242,7 @@ const pets = [
   ];
    
 const filterCards = (array) => {
+
   let domString = "";
   array.forEach((pet) => {
     domString += `<div class="card" style="width: 18rem;">
@@ -276,12 +277,14 @@ btnFilterDino.addEventListener('click',() => {
   filterCards(filteredPets)
 })
 
+
 const btnFilterDog = document.querySelector("#btn-dog");
 
 btnFilterDog.addEventListener('click',() => {
   const filteredPets = filterByType('dog');
   filterCards(filteredPets)
 })
+
 
 const btnFilterAll = document.querySelector("#btn-all");
 

@@ -242,6 +242,7 @@ const pets = [
   ];
    
 const filterCards = (array) => {
+
   let domString = "";
   array.forEach((pet) => {
     domString += `<div class="card" style="width: 18rem;">
