@@ -241,9 +241,9 @@ const pets = [
     }
   ];
    
-const filterCards = (array) => {
+const filterCards = (pets) => {
   let domString = "";
-  array.forEach((pet) => {
+  pets.forEach((pet) => {
     domString += `<div class="card" style="width: 18rem;">
     <div class="card-body">
     <img src="${pet.imageUrl}" class="card-img-top" alt="...">
