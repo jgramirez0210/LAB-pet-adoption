@@ -1,0 +1,32 @@
+body {
+  background-color: aqua;
+}
+#app {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.card {
+  width:250px;
+  height: 450px;
+  box-sizing: border-box; 
+  margin: 10px;
+}
+img {
+  width: 100px;
+  height: 200px
+}
+#buttonContainers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+}
+#btn-dino {
+  background:orange;
+}
+
+#btn-dog {
+  background:
+}
