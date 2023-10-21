@@ -292,4 +292,4 @@ const btnFilterAll = document.querySelector("#btn-all");
 btnFilterAll.addEventListener('click',() => {
   filterCards(pets);
 })
-
+git 
