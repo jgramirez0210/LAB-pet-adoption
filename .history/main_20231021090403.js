@@ -165,7 +165,7 @@ const pets = [
       color: "Red",
       specialSkill: "Owns a Nintendo Power Glove.",
       type: "dino",
-      imageUrl: "https://png.pngtree.com/png-vector/20191206/ourlarge/pngtree-a-red-dinosaur-vector-or-color-illustration-png-image_2030880.jpg"
+      imageUrl: "https://st5.depositphotos.com/75472038/64201/i/600/depositphotos_642011000-stock-photo-portrait-beautiful-cute-orange-cat.jpg"
     },
     {
         id: 22,
@@ -290,7 +290,6 @@ btnFilterDog.addEventListener('click',() => {
 const btnFilterAll = document.querySelector("#btn-all");
 
 btnFilterAll.addEventListener('click',() => {
-  const filteredPets = filterByType('all');
+  const filteredPets = filterByType('any');
   filterCards(filteredPets)
 })
-

@@ -293,4 +293,4 @@ btnFilterAll.addEventListener('click',() => {
   const filteredPets = filterByType('all');
   filterCards(filteredPets)
 })
-
+git add -A

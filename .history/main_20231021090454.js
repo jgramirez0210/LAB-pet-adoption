@@ -290,7 +290,6 @@ btnFilterDog.addEventListener('click',() => {
 const btnFilterAll = document.querySelector("#btn-all");
 
 btnFilterAll.addEventListener('click',() => {
-  const filteredPets = filterByType('all');
+  const filteredPets = filterByType('any');
   filterCards(filteredPets)
 })
-
