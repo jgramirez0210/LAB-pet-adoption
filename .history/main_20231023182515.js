@@ -240,8 +240,6 @@ const pets = [
       imageUrl: "https://img.freepik.com/free-vector/tyrannosaurus-dinosaur-cartoon-character-sticker_1308-76137.jpg"
     }
   ];
-
-
   //  render cards on the screen
   const displayPets = (array) => {
     let domString = "";
@@ -263,7 +261,7 @@ const pets = [
     app.innerHTML = domString;
   }
 
-
+  
   // displays pets
   const app = document.querySelector("#app");
   displayPets(pets);
@@ -306,9 +304,9 @@ const pets = [
   })
   
   const form = document.querySelector('form')
-
   
   // Delete function 
+
   const deleteCard = (event) => {
     if(event.target.id.includes("delete")){
       const [, id] = event.target.id.split("--");
@@ -320,20 +318,18 @@ const pets = [
   app.addEventListener("click", deleteCard)
   
 
-// Form Submit Button 
+
   document.querySelector('form').addEventListener('submit', function(event) {
     event.preventDefault();
   
-    let name = document.querySelector("#animalName").value;
-    let color = document.querySelector("#animalColor").value;
-    let specialSkill = document.querySelector("#specialSkill").value;
-    let imageUrl = document.querySelector("#imageUrl").value;
-   
+    name: document.querySelector("#animalName").value;
+    color: document.querySelector("#animalColor").value;
+    specialSkill: document.querySelector("#specialSkill").value;
+    formImgUrl: document.querySelector("#formImgUrl").value;
     let type;
-      if (document.getElementById('catRadio').checked) type = 'cat';
+    if (document.getElementById('catRadio').checked) type = 'cat';
       else if (document.getElementById('dogRadio').checked) type = 'dog';
       else if (document.getElementById('dinoRadio').checked) type = 'dino';
-      
       const newPet = {
         id: pets.length + 1,
         name,
@@ -343,7 +339,7 @@ const pets = [
         imageUrl
       };
   
-      pets.push(newPet);
+      pets.push(newPets);
       displayPets(pets);
   })
   
