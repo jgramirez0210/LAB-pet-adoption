@@ -13,7 +13,7 @@ const pets = [
       color: "Brown",
       specialSkill: "Just picks the tomatoes off of a sandwich instead of requesting a whole new sandwich.",
       type: "dino",
-      imageUrl: "https://cdn.mos.cms.futurecdn.net/2gqUK55fXFRnyuHyzuCYMn.jpg",
+      imageUrl: "https://media.istockphoto.com/id/1199279669/photo/big-eyed-naughty-obese-cat-behind-the-desk-with-red-hat-grey-color-british-sort-hair-cat.webp?b=1&s=170667a&w=0&k=20&c=ohoTPRNiNT38ItF9sncBQqRXFG0Ra7TS8tnv0ZgWDec=",
     },
     {
       id: 3,
@@ -61,7 +61,7 @@ const pets = [
       color: "Grey",
       specialSkill: "Comfortable in the outdoors for up to eight hours.",
       type: "dino",
-      imageUrl: "https://i2.pickpik.com/photos/618/305/180/dinosaur-gad-mammal-dino-preview.jpg"
+      imageUrl: "https://i1.pickpik.com/photos/536/869/197/young-cat-cat-cats-pet-preview.jpg"
     },
     {
       id: 9,
@@ -85,7 +85,7 @@ const pets = [
       color: "Orange",
       specialSkill: "Can be around food without staring creepily at it.",
       type: "dino",
-      imageUrl: "https://static.vecteezy.com/system/resources/thumbnails/013/687/657/small/orange-dinosaur-illustration-on-white-background-free-vector.jpg"
+      imageUrl: "https://cdn.pixabay.com/photo/2015/02/14/10/16/cat-636172_640.jpg"
     },
     {
       id: 12,
@@ -165,7 +165,7 @@ const pets = [
       color: "Red",
       specialSkill: "Owns a Nintendo Power Glove.",
       type: "dino",
-      imageUrl: "https://png.pngtree.com/png-vector/20191206/ourlarge/pngtree-a-red-dinosaur-vector-or-color-illustration-png-image_2030880.jpg"
+      imageUrl: "https://st5.depositphotos.com/75472038/64201/i/600/depositphotos_642011000-stock-photo-portrait-beautiful-cute-orange-cat.jpg"
     },
     {
         id: 22,
@@ -241,9 +241,10 @@ const pets = [
     }
   ];
    
-const filterCards = (array) => {
+const filterCards = (arr) => {
+
   let domString = "";
-  array.forEach((pet) => {
+  pets.forEach((pet) => {
     domString += `<div class="card" style="width: 18rem;">
     <div class="card-body">
     <img src="${pet.imageUrl}" class="card-img-top" alt="...">
@@ -259,7 +260,6 @@ const filterCards = (array) => {
   app.innerHTML = domString;
 }
 
-
 const filterByType = (type) => {
   return pets.filter(pet => pet.type === type)
 }
@@ -270,12 +270,14 @@ btnFilterCat.addEventListener('click',() => {
   filterCards(filteredPets)
 })
 
+
 const btnFilterDino = document.querySelector("#btn-dino");
 
 btnFilterDino.addEventListener('click',() => {
   const filteredPets = filterByType('dino');
   filterCards(filteredPets)
 })
+
 
 const btnFilterDog = document.querySelector("#btn-dog");
 
@@ -284,8 +286,10 @@ btnFilterDog.addEventListener('click',() => {
   filterCards(filteredPets)
 })
 
+
 const btnFilterAll = document.querySelector("#btn-all");
 
 btnFilterAll.addEventListener('click',() => {
-  filterCards(pets);
+  const filteredPets = filterByType('any');
+  filterCards(filteredPets)
 })
