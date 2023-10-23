@@ -241,7 +241,7 @@ const pets = [
     }
   ];
    
-const filterCards = (array) => {
+const displayPets = (array) => {
   let domString = "";
   array.forEach((pet) => {
     domString += `<div class="card" style="width: 18rem;">
@@ -250,24 +250,31 @@ const filterCards = (array) => {
       <h5 class="card-title">${pet.name}</h5>
       <h6 class="card-subtitle mb-2 text-body-secondary">${pet.color}</h6>
       <p class="card-text">${pet.specialSkill}</p>
+      <footer>
       <h6 class="card-subtitle mb-2 text-body-secondary">${pet.type}</h6>
+      </footer>
+      <button id="delete--${pet.id}">Delete</button>
     </div>
   </div>`;
   })
-
-  const app = document.querySelector("#app");
+  
   app.innerHTML = domString;
 }
+
+const app = document.querySelector("#app");
+displayPets(pets);
 
 
 const filterByType = (type) => {
   return pets.filter(pet => pet.type === type)
 }
+
+
 const btnFilterCat = document.querySelector("#btn-cat");
 
 btnFilterCat.addEventListener('click',() => {
   const filteredPets = filterByType('cat');
-  filterCards(filteredPets)
+  displayPets(filteredPets)
 })
 
 
@@ -275,7 +282,7 @@ const btnFilterDino = document.querySelector("#btn-dino");
 
 btnFilterDino.addEventListener('click',() => {
   const filteredPets = filterByType('dino');
-  filterCards(filteredPets)
+  displayPets(filteredPets)
 })
 
 
@@ -283,12 +290,53 @@ const btnFilterDog = document.querySelector("#btn-dog");
 
 btnFilterDog.addEventListener('click',() => {
   const filteredPets = filterByType('dog');
-  filterCards(filteredPets)
+  displayPets(filteredPets)
 })
 
 
 const btnFilterAll = document.querySelector("#btn-all");
 
 btnFilterAll.addEventListener('click',() => {
-  filterCards(pets);
+  displayPets(pets);
 })
+
+const form = document.querySelector('form')
+
+
+const deleteCard = (event) => {
+  if(event.target.id.includes("delete")){
+    const [, id] = event.target.id.split("--");
+    const index = pets.findIndex(obj => obj.id === Number(id));
+    pets.splice(index, 1);
+    displayPets(pets);
+  }
+}
+app.addEventListener("click", deleteCard)
+
+document.querySelector('form').addEventListener('submit', function(event) {
+  event.preventDefault();
+    
+  name: document.querySelector("#animalName").value;
+  color: document.querySelector("#animalColor").value;
+  specialSkill: document.querySelector("#specialSkill").value;
+  formImgUrl: document.querySelector("#formImgUrl").value;
+  let type;
+  if (document.getElementById('catRadio').checked) type = 'cat';
+    else if (document.getElementById('dogRadio').checked) type = 'dog';
+    else if (document.getElementById('dinoRadio').checked) type = 'dino';
+    const newPet = {
+      id: pets.length + 1,
+      name,
+      color,
+      specialSkill,
+      type,
+      imageUrl
+    };
+
+    pets.push(newPets);
+    displayPets(pets);
+})
+
+
+
+  

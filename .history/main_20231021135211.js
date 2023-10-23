@@ -241,54 +241,78 @@ const pets = [
     }
   ];
    
-const filterCards = (array) => {
-  let domString = "";
-  array.forEach((pet) => {
-    domString += `<div class="card" style="width: 18rem;">
-    <div class="card-body">
-    <img src="${pet.imageUrl}" class="card-img-top" alt="...">
-      <h5 class="card-title">${pet.name}</h5>
-      <h6 class="card-subtitle mb-2 text-body-secondary">${pet.color}</h6>
-      <p class="card-text">${pet.specialSkill}</p>
-      <h6 class="card-subtitle mb-2 text-body-secondary">${pet.type}</h6>
-    </div>
-  </div>`;
-  })
+  document.addEventListener('DOMContentLoaded', () => {
+    const app = document.getElementById('app');
+    const btnCat = document.getElementById('btn-cat');
+    const btnDino = document.getElementById('btn-dino');
+    const btnDog = document.getElementById('btn-dog');
+    const btnAll = document.getElementById('btn-all');
+    const form = document.querySelector('form');
 
-  const app = document.querySelector("#app");
-  app.innerHTML = domString;
+    // Display all pets on initial load
+    displayPets(pets);
+
+    btnCat.addEventListener('click', () => filterPets('cat'));
+    btnDino.addEventListener('click', () => filterPets('dino'));
+    btnDog.addEventListener('click', () => filterPets('dog'));
+    btnAll.addEventListener('click', () => displayPets(pets));
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        addPet();
+    });
+});
+
+function displayPets(filteredPets) {
+    const app = document.getElementById('app');
+    app.innerHTML = ''; // Clear previous pets
+
+    filteredPets.forEach(pet => {
+        const petDiv = document.createElement('div');
+        petDiv.innerHTML = `
+            <h3>${pet.name}</h3>
+            <img src="${pet.imageUrl}" alt="${pet.name}" width="200">
+            <p>Color: ${pet.color}</p>
+            <p>Special Skill: ${pet.specialSkill}</p>
+        `;
+        app.appendChild(petDiv);
+    });
+}
+
+function filterPets(type) {
+    const filteredPets = pets.filter(pet => pet.type === type);
+    displayPets(filteredPets);
+}
+
+function addPet() {
+    const name = document.getElementById('animalName').value;
+    const color = document.getElementById('animalColor').value;
+    const specialSkill = document.getElementById('specialSkill').value;
+    const imageUrl = document.getElementById('formImgUrl').value;
+
+    let type;
+    if (document.getElementById('catRadio').checked) {
+        type = 'cat';
+    } else if (document.getElementById('dogRadio').checked) {
+        type = 'dog';
+    } else if (document.getElementById('dinoRadio').checked) {
+        type = 'dino';
+    }
+
+    const newPet = {
+        id: pets.length + 1,  // Just incrementing id for simplicity
+        name,
+        color,
+        specialSkill,
+        type,
+        imageUrl
+    };
+
+    pets.push(newPet);
+    displayPets(pets);
 }
 
 
-const filterByType = (type) => {
-  return pets.filter(pet => pet.type === type)
-}
-const btnFilterCat = document.querySelector("#btn-cat");
-
-btnFilterCat.addEventListener('click',() => {
-  const filteredPets = filterByType('cat');
-  filterCards(filteredPets)
-})
 
 
-const btnFilterDino = document.querySelector("#btn-dino");
-
-btnFilterDino.addEventListener('click',() => {
-  const filteredPets = filterByType('dino');
-  filterCards(filteredPets)
-})
-
-
-const btnFilterDog = document.querySelector("#btn-dog");
-
-btnFilterDog.addEventListener('click',() => {
-  const filteredPets = filterByType('dog');
-  filterCards(filteredPets)
-})
-
-
-const btnFilterAll = document.querySelector("#btn-all");
-
-btnFilterAll.addEventListener('click',() => {
-  filterCards(pets);
-})
+  
