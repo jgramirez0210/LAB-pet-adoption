@@ -343,7 +343,7 @@ const pets = [
         imageUrl
       };
   
-      pets.push(newPet);
+      pets.push(newPets);
       displayPets(pets);
   })
   

@@ -240,111 +240,52 @@ const pets = [
       imageUrl: "https://img.freepik.com/free-vector/tyrannosaurus-dinosaur-cartoon-character-sticker_1308-76137.jpg"
     }
   ];
-
-
-  //  render cards on the screen
-  const displayPets = (array) => {
-    let domString = "";
-    array.forEach((pet) => {
-      domString += `<div class="card" style="width: 18rem;">
-      <div class="card-body">
-      <img src="${pet.imageUrl}" class="card-img-top" alt="...">
-        <h5 class="card-title">${pet.name}</h5>
-        <h6 class="card-subtitle mb-2 text-body-secondary">${pet.color}</h6>
-        <p class="card-text">${pet.specialSkill}</p>
-        <footer>
-        <h6 class="card-subtitle mb-2 text-body-secondary">${pet.type}</h6>
-        </footer>
-        <button id="delete--${pet.id}">Delete</button>
-      </div>
-    </div>`;
-    })
-  
-    app.innerHTML = domString;
-  }
-
-
-  // displays pets
-  const app = document.querySelector("#app");
-  displayPets(pets);
-  
-
-  // filters
-  const filterByType = (type) => {
-    return pets.filter(pet => pet.type === type)
-  }
-  
-  
-  const btnFilterCat = document.querySelector("#btn-cat");
-  
-  btnFilterCat.addEventListener('click',() => {
-    const filteredPets = filterByType('cat');
-    displayPets(filteredPets)
-  })
-  
-  
-  const btnFilterDino = document.querySelector("#btn-dino");
-  
-  btnFilterDino.addEventListener('click',() => {
-    const filteredPets = filterByType('dino');
-    displayPets(filteredPets)
-  })
-  
-  
-  const btnFilterDog = document.querySelector("#btn-dog");
-  
-  btnFilterDog.addEventListener('click',() => {
-    const filteredPets = filterByType('dog');
-    displayPets(filteredPets)
-  })
-  
-  
-  const btnFilterAll = document.querySelector("#btn-all");
-  
-  btnFilterAll.addEventListener('click',() => {
-    displayPets(pets);
-  })
-  
-  const form = document.querySelector('form')
-
-  
-  // Delete function 
-  const deleteCard = (event) => {
-    if(event.target.id.includes("delete")){
-      const [, id] = event.target.id.split("--");
-      const index = pets.findIndex(obj => obj.id === Number(id));
-      pets.splice(index, 1);
-      displayPets(pets);
-    }
-  }
-  app.addEventListener("click", deleteCard)
-  
-
-// Form Submit Button 
-  document.querySelector('form').addEventListener('submit', function(event) {
-    event.preventDefault();
-  
-    let name = document.querySelector("#animalName").value;
-    let color = document.querySelector("#animalColor").value;
-    let specialSkill = document.querySelector("#specialSkill").value;
-    let imageUrl = document.querySelector("#imageUrl").value;
    
-    let type;
-      if (document.getElementById('catRadio').checked) type = 'cat';
-      else if (document.getElementById('dogRadio').checked) type = 'dog';
-      else if (document.getElementById('dinoRadio').checked) type = 'dino';
-      
-      const newPet = {
-        id: pets.length + 1,
-        name,
-        color,
-        specialSkill,
-        type,
-        imageUrl
-      };
-  
-      pets.push(newPet);
-      displayPets(pets);
+const filterCards = (array) => {
+  let domString = "";
+  array.forEach((pet) => {
+    domString += `<div class="card" style="width: 18rem;">
+    <div class="card-body">
+    <img src="${pet.imageUrl}" class="card-img-top" alt="...">
+      <h5 class="card-title">${pet.name}</h5>
+      <h6 class="card-subtitle mb-2 text-body-secondary">${pet.color}</h6>
+      <p class="card-text">${pet.specialSkill}</p>
+      <h6 class="card-subtitle mb-2 text-body-secondary">${pet.type}</h6>
+    </div>
+  </div>`;
   })
-  
-  
+
+  const app = document.querySelector("#app");
+  app.innerHTML = domString;
+}
+
+
+const filterByType = (type) => {
+  return pets.filter(pet => pet.type === type)
+}
+const btnFilterCat = document.querySelector("#btn-cat");
+
+btnFilterCat.addEventListener('click',() => {
+  const filteredPets = filterByType('cat');
+  filterCards(filteredPets)
+})
+
+const btnFilterDino = document.querySelector("#btn-dino");
+
+btnFilterDino.addEventListener('click',() => {
+  const filteredPets = filterByType('dino');
+  filterCards(filteredPets)
+})
+
+const btnFilterDog = document.querySelector("#btn-dog");
+
+btnFilterDog.addEventListener('click',() => {
+  const filteredPets = filterByType('dog');
+  filterCards(filteredPets)
+})
+
+const btnFilterAll = document.querySelector("#btn-all");
+
+btnFilterAll.addEventListener('click',() => {
+  filterCards(pets);
+})

@@ -333,7 +333,6 @@ const pets = [
       if (document.getElementById('catRadio').checked) type = 'cat';
       else if (document.getElementById('dogRadio').checked) type = 'dog';
       else if (document.getElementById('dinoRadio').checked) type = 'dino';
-      
       const newPet = {
         id: pets.length + 1,
         name,
@@ -343,7 +342,7 @@ const pets = [
         imageUrl
       };
   
-      pets.push(newPet);
+      pets.push(newPets);
       displayPets(pets);
   })
   
