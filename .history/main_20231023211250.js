@@ -324,7 +324,7 @@ const form = document.querySelector('form')
       color: document.querySelector("#animal-color").value,
       specialSkill: document.querySelector("#special-skill").value,
       imageUrl: document.querySelector("#formImgUrl").value,
-      type: document.querySelector('input[name="flexRadioDefault"]:checked').value,
+      type: document.querySelector('input[name="flexRadioDefault"]:checked').id,
     }
     
     pets.push(newCard);
