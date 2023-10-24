@@ -204,7 +204,7 @@ const pets = [
       name: "Bubba",
       color: "Yellow",
       specialSkill: "Cleans himself.",
-      type: "Dog",
+      type: "dog",
       imageUrl: "https://www.thetrendywhippet.co.uk/wp-content/uploads/2016/11/IMG_1651-600x400.jpg"
     },
     {

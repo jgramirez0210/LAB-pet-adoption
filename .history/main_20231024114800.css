@@ -41,11 +41,10 @@ body footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50px;
+  height: 30%;
 }
 .card footer p {
-  color: white;
-  padding-top: 13px;
+    color: white;
 }
 .card button {
   display: block;

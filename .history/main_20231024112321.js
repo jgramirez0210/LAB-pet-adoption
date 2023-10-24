@@ -180,7 +180,7 @@ const pets = [
       name: "Buddy",
       color: "Red",
       specialSkill: "Enjoys fine wine.",
-      type: "Dog",
+      type: "dog",
       imageUrl: "http://1.bp.blogspot.com/-VjM0CmtN-vU/T7YX-LXa09I/AAAAAAAADA0/Vt1oGWEG0lw/s1600/sheepdog+border+collie+shakes+off+water+funny+picture+photo+pulling+faces+raspberry+tongue.jpg"
     },
     {
@@ -188,7 +188,7 @@ const pets = [
       name: "George",
       color: "Brown",
       specialSkill: "Participates in karaoke but does not force others to go out to karaoke.",
-      type: "Dog",
+      type: "dog",
       imageUrl: "https://plus.unsplash.com/premium_photo-1664303034905-2e850c5430a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YnJvd24lMjBkb2d8ZW58MHx8MHx8fDA%3D&w=1000&q=80"
     },
     {
@@ -204,7 +204,7 @@ const pets = [
       name: "Bubba",
       color: "Yellow",
       specialSkill: "Cleans himself.",
-      type: "Dog",
+      type: "dog",
       imageUrl: "https://www.thetrendywhippet.co.uk/wp-content/uploads/2016/11/IMG_1651-600x400.jpg"
     },
     {
