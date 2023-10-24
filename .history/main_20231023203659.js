@@ -323,7 +323,10 @@ const pets = [
 // Form Submit Button 
   const createCard = (e) => {
     e.preventDefault();
- 
+
+  //  gets radio button value
+    const selectedType = 
+
     const newCard = {
       id: pets.length + 1,
       name: document.querySelector("#animal-name").value,
@@ -331,6 +334,7 @@ const pets = [
       specialSkill: document.querySelector("#special-skill").value,
       imageUrl: document.querySelector("#formImgUrl").value,
       type: document.querySelector('input[name="flexRadioDefault"]:checked').id
+      //renders out radio
     }
     
     pets.push(newCard);
