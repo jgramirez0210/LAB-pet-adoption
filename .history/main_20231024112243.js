@@ -28,7 +28,7 @@ const pets = [
       name: "Coco",
       color: "Black",
       specialSkill: "Burps minimally.",
-      type: "Dog",
+      type: "dog",
       imageUrl: "http://cdn.akc.org/content/article-body-image/funny-pembroke_welsh_corgi.jpg"
     },
     {
@@ -44,7 +44,7 @@ const pets = [
       name: "Tiger",
       color: "Black",
       specialSkill: "Can read (but cannot understand) Hebrew.",
-      type: "Dog",
+      type: "dog",
       imageUrl: "https://upload.wikimedia.org/wikipedia/commons/7/7e/Basset_Hound_600.jpg"
     },
     {
@@ -92,7 +92,7 @@ const pets = [
       name: "Buster",
       color: "Green",
       specialSkill: "Does not use excessive acronyms.",
-      type: "Dog",
+      type: "dog",
       imageUrl: "https://i.pinimg.com/originals/1f/30/8c/1f308c9c108a384b91b39430cc7312e9.jpg"
     },
     {
@@ -100,7 +100,7 @@ const pets = [
       name: "Chester",
       color: "Red",
       specialSkill: "Expertly quotes and recognizes dialogue from early seasons of The Simpsons.",
-      type: "Dog",
+      type: "dog",
       imageUrl: "https://img.freepik.com/free-photo/perfect-companion-way-english-cocker-spaniel-young-dog-is-posing-cute-playful-braun-doggy-pet-is-sitting-full-attention-isolated-red-background-concept-motion-action-movement_155003-36386.jpg?size=626&ext=jpg&ga=GA1.1.1413502914.1696896000&semt=ais"
     },
     {
@@ -148,7 +148,7 @@ const pets = [
       name: "Callie",
       color: "Blue",
       specialSkill: "Listens attentively to boring stories.",
-      type: "Dog",
+      type: "dog",
       imageUrl: "https://static.vecteezy.com/system/resources/thumbnails/013/758/996/small/small-blue-dog-illustration-on-white-background-free-vector.jpg"
     },
     {
@@ -180,7 +180,7 @@ const pets = [
       name: "Buddy",
       color: "Red",
       specialSkill: "Enjoys fine wine.",
-      type: "Dog",
+      type: "dog",
       imageUrl: "http://1.bp.blogspot.com/-VjM0CmtN-vU/T7YX-LXa09I/AAAAAAAADA0/Vt1oGWEG0lw/s1600/sheepdog+border+collie+shakes+off+water+funny+picture+photo+pulling+faces+raspberry+tongue.jpg"
     },
     {
@@ -188,7 +188,7 @@ const pets = [
       name: "George",
       color: "Brown",
       specialSkill: "Participates in karaoke but does not force others to go out to karaoke.",
-      type: "Dog",
+      type: "dog",
       imageUrl: "https://plus.unsplash.com/premium_photo-1664303034905-2e850c5430a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YnJvd24lMjBkb2d8ZW58MHx8MHx8fDA%3D&w=1000&q=80"
     },
     {
@@ -196,7 +196,7 @@ const pets = [
       name: "Salem",
       color: "Red",
       specialSkill: "Knows the words to 4 rap songs.",
-      type: "Cat",
+      type: "cat",
       imageUrl: "https://image.shutterstock.com/image-photo/womans-hand-stroking-ginger-cat-260nw-2143135507.jpg"
     },
     {
@@ -204,7 +204,7 @@ const pets = [
       name: "Bubba",
       color: "Yellow",
       specialSkill: "Cleans himself.",
-      type: "Dog",
+      type: "dog",
       imageUrl: "https://www.thetrendywhippet.co.uk/wp-content/uploads/2016/11/IMG_1651-600x400.jpg"
     },
     {
@@ -220,7 +220,7 @@ const pets = [
       name: "Nala",
       color: "Purple",
       specialSkill: "Dances when he has to.",
-      type: "Cat",
+      type: "cat",
       imageUrl: "https://tailandfur.com/wp-content/uploads/2016/03/40-Scary-and-Funny-Cat-Pictures-8.jpg"
     },
     {
@@ -228,7 +228,7 @@ const pets = [
       name: "Oscar",
       color: "Green",
       specialSkill: "Gives hugs with appropriate pressure and for the right length of time.",
-      type: "Cat",
+      type: "cat",
       imageUrl: "http://img.izismile.com/img/img2/20090219/cats_02.jpg"
     },
     {
