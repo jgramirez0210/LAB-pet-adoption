@@ -253,7 +253,7 @@ const pets = [
         <h6 class="card-subtitle mb-2 text-body-secondary">${pet.color}</h6>
         <p class="card-text">${pet.specialSkill}</p>
         <footer>
-        <p class="card-subtitle mb-2 text-body-secondary">${pet.type}</p>
+        <h6 class="card-subtitle mb-2 text-body-secondary">${pet.type}</h6>
         </footer>
         <button id="delete--${pet.id}">Delete</button>
       </div>
@@ -323,18 +323,14 @@ const pets = [
 // Form Submit Button 
   const createCard = (e) => {
     e.preventDefault();
-
-  //  gets radio button value
-    const selectedType = document.querySelector('input[name="flexRadioDefault"]:checked');
-
+   
+    const selectedType = 
     const newCard = {
       id: pets.length + 1,
       name: document.querySelector("#animal-name").value,
       color: document.querySelector("#animal-color").value,
       specialSkill: document.querySelector("#special-skill").value,
       imageUrl: document.querySelector("#formImgUrl").value,
-      type: selectedType ? selectedType.value : '' 
-      //renders out radio
     }
     
     pets.push(newCard);

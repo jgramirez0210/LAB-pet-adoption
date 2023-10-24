@@ -333,8 +333,7 @@ const pets = [
       color: document.querySelector("#animal-color").value,
       specialSkill: document.querySelector("#special-skill").value,
       imageUrl: document.querySelector("#formImgUrl").value,
-      type: selectedType ? selectedType.value : '' 
-      //renders out radio
+      type: selectedType ? selectedType.value : '' renders outt radio
     }
     
     pets.push(newCard);

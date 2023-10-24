@@ -32,9 +32,9 @@ img {
 }
 #btn-all {
   background: Green;
-}
-body footer {
+}s
+footer {
   background-color:gray;
+  text: white;
   text-align: center;
-  color: white;
 }

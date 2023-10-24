@@ -334,7 +334,6 @@ const pets = [
       specialSkill: document.querySelector("#special-skill").value,
       imageUrl: document.querySelector("#formImgUrl").value,
       type: selectedType ? selectedType.value : '' 
-      //renders out radio
     }
     
     pets.push(newCard);

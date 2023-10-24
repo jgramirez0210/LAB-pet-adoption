@@ -253,7 +253,7 @@ const pets = [
         <h6 class="card-subtitle mb-2 text-body-secondary">${pet.color}</h6>
         <p class="card-text">${pet.specialSkill}</p>
         <footer>
-        <p class="card-subtitle mb-2 text-body-secondary">${pet.type}</p>
+         class="card-subtitle mb-2 text-body-secondary">${pet.type}</>
         </footer>
         <button id="delete--${pet.id}">Delete</button>
       </div>
@@ -333,8 +333,7 @@ const pets = [
       color: document.querySelector("#animal-color").value,
       specialSkill: document.querySelector("#special-skill").value,
       imageUrl: document.querySelector("#formImgUrl").value,
-      type: selectedType ? selectedType.value : '' 
-      //renders out radio
+      type: selectedType ? selectedType.value : ''
     }
     
     pets.push(newCard);

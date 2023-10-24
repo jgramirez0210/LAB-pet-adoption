@@ -33,8 +33,11 @@ img {
 #btn-all {
   background: Green;
 }
-body footer {
+footer {
   background-color:gray;
+  color: white;
   text-align: center;
+}
+type {
   color: white;
 }

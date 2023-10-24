@@ -253,7 +253,7 @@ const pets = [
         <h6 class="card-subtitle mb-2 text-body-secondary">${pet.color}</h6>
         <p class="card-text">${pet.specialSkill}</p>
         <footer>
-        <p class="card-subtitle mb-2 text-body-secondary">${pet.type}</p>
+        <h6 class="card-subtitle mb-2 text-body-secondary">${pet.type}</h6>
         </footer>
         <button id="delete--${pet.id}">Delete</button>
       </div>
@@ -321,26 +321,31 @@ const pets = [
   
 
 // Form Submit Button 
-  const createCard = (e) => {
-    e.preventDefault();
-
-  //  gets radio button value
-    const selectedType = document.querySelector('input[name="flexRadioDefault"]:checked');
-
-    const newCard = {
-      id: pets.length + 1,
-      name: document.querySelector("#animal-name").value,
-      color: document.querySelector("#animal-color").value,
-      specialSkill: document.querySelector("#special-skill").value,
-      imageUrl: document.querySelector("#formImgUrl").value,
-      type: selectedType ? selectedType.value : '' 
-      //renders out radio
-    }
-    
-    pets.push(newCard);
-    displayPets(pets);
-    form.reset();
-    console.log("This is working!")
-  }
-  form.addEventListener('submit', createCard)
+form.addEventListener('submit', createCard)
+  // document.querySelector('form-submit').addEventListener('submit', function(event) {
+  //   event.preventDefault();
+  
+  //   let name = document.querySelector("#animalName").value;
+  //   let color = document.querySelector("#animalColor").value;
+  //   let specialSkill = document.querySelector("#specialSkill").value;
+  //   let imageUrl = document.querySelector("#imageUrl").value;
+   
+  //   let type;
+  //     if (document.getElementById('catRadio').checked) type = 'cat';
+  //     else if (document.getElementById('dogRadio').checked) type = 'dog';
+  //     else if (document.getElementById('dinoRadio').checked) type = 'dino';
+      
+  //     const newPet = {
+  //       id: pets.length + 1,
+  //       name,
+  //       color,
+  //       specialSkill,
+  //       type,
+  //       imageUrl
+  //     };
+  
+  //     pets.push(newPet);
+  //     displayPets(pets);
+  // })
+  
   
