@@ -261,6 +261,11 @@ const pets = [
   }
 
 
+  // displays pets
+ 
+  
+  
+
   // filters
   const filterByType = (type) => {
     return pets.filter(pet => pet.type === type)
@@ -324,12 +329,13 @@ const form = document.querySelector('form')
       color: document.querySelector("#animal-color").value,
       specialSkill: document.querySelector("#special-skill").value,
       imageUrl: document.querySelector("#formImgUrl").value,
-      type: document.querySelector('input[name="flexRadioDefault"]:checked').value,
+      type: document.querySelector('input[name="flexRadioDefault"]:checked').id,
     }
     
     pets.push(newCard);
     displayPets(pets);
     form.reset();
+    console.log("This is working!")
   }
   form.addEventListener('submit', createCard)
    
@@ -342,5 +348,5 @@ const form = document.querySelector('form')
 startApp()
 
  const events = () => {
-  const app = document.querySelector("#app");
+
  }
