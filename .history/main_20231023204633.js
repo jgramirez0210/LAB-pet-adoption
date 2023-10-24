@@ -240,6 +240,8 @@ const pets = [
       imageUrl: "https://img.freepik.com/free-vector/tyrannosaurus-dinosaur-cartoon-character-sticker_1308-76137.jpg"
     }
   ];
+
+
   //  render cards on the screen
   const displayPets = (array) => {
     let domString = "";
@@ -272,7 +274,7 @@ const pets = [
     return pets.filter(pet => pet.type === type)
   }
   
-  // Cat Button 
+  Cat Button
   const btnFilterCat = document.querySelector("#btn-cat");
   
   btnFilterCat.addEventListener('click',() => {
@@ -280,7 +282,7 @@ const pets = [
     displayPets(filteredPets)
   })
   
-  // Dino Button 
+  
   const btnFilterDino = document.querySelector("#btn-dino");
   
   btnFilterDino.addEventListener('click',() => {
@@ -288,7 +290,7 @@ const pets = [
     displayPets(filteredPets)
   })
   
-  // Dog Button 
+  
   const btnFilterDog = document.querySelector("#btn-dog");
   
   btnFilterDog.addEventListener('click',() => {
@@ -296,14 +298,14 @@ const pets = [
     displayPets(filteredPets)
   })
   
-  // Filter All Button 
+  
   const btnFilterAll = document.querySelector("#btn-all");
   
   btnFilterAll.addEventListener('click',() => {
     displayPets(pets);
   })
   
-  
+  const form = document.querySelector('form')
 
   
   // Delete function 
@@ -319,8 +321,6 @@ const pets = [
   
 
 // Form Submit Button 
-const form = document.querySelector('form')
-
   const createCard = (e) => {
     e.preventDefault();
  

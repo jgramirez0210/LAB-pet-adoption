@@ -240,6 +240,8 @@ const pets = [
       imageUrl: "https://img.freepik.com/free-vector/tyrannosaurus-dinosaur-cartoon-character-sticker_1308-76137.jpg"
     }
   ];
+
+
   //  render cards on the screen
   const displayPets = (array) => {
     let domString = "";
@@ -320,7 +322,6 @@ const pets = [
 
 // Form Submit Button 
 const form = document.querySelector('form')
-
   const createCard = (e) => {
     e.preventDefault();
  
