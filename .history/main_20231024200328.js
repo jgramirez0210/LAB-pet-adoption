@@ -246,7 +246,6 @@ const pets = [
   const btnFilterDog = document.querySelector("#btn-dog");
   const btnFilterAll = document.querySelector("#btn-all");
   const app = document.querySelector("#app");
-// Filter Buttons
   const filterByType = (type) => {
     return pets.filter(pet => pet.type === type)
   }
@@ -265,25 +264,6 @@ const pets = [
   btnFilterAll.addEventListener('click',() => {
     displayPets(pets);
   }) 
-
-  const displayPets = (array) => {
-    let domString = "";
-    array.forEach((pet) => {
-      domString += `<div class="card" style="width: 18rem;">
-      <div class="card-body">
-      <img src="${pet.imageUrl}" class="card-img-top" alt="...">
-        <h5 class="card-title">${pet.name}</h5>
-        <h6 class="card-subtitle mb-2 text-body-secondary">${pet.color}</h6>
-        <p class="card-text">${pet.specialSkill}</p>
-        <footer>
-        <p class="card-subtitle mb-2 text-body-secondary">${pet.type}</p>
-        </footer>
-        <button id="delete--${pet.id}">Delete</button>
-      </div>
-    </div>`;
-    })
-    app.innerHTML = domString;
-  }
   const deleteCard = (event) => {
     if(event.target.id.includes("delete")){
       const [, id] = event.target.id.split("--");

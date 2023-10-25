@@ -1,0 +1,66 @@
+body {
+  background-color: aqua;
+}
+#app {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.card {
+  width:250px;
+  height: 550px;
+  box-sizing: border-box; 
+  margin: 10px;
+}
+img {
+  width: 100px;
+  height: 200px
+}
+#buttonContainers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+}
+#btn-dino {
+  background:orange;
+}
+#btn-dog {
+  background: purple;
+}
+#btn-all {
+  background: Green;
+}
+body footer {
+  background-color:gray;
+  width: 100%;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+}
+.card footer p {
+  color: white;
+  padding-top: 13px;
+}
+.card button {
+  display: block;
+  margin: auto;
+  border-radius: 10px;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+form {
+  display: flex;
+  flex-direction: colu;
+  justify-content: space-evenly;
+  
+}

@@ -246,7 +246,7 @@ const pets = [
   const btnFilterDog = document.querySelector("#btn-dog");
   const btnFilterAll = document.querySelector("#btn-all");
   const app = document.querySelector("#app");
-// Filter Buttons
+
   const filterByType = (type) => {
     return pets.filter(pet => pet.type === type)
   }
