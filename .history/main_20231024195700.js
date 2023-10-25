@@ -240,32 +240,9 @@ const pets = [
       imageUrl: "https://img.freepik.com/free-vector/tyrannosaurus-dinosaur-cartoon-character-sticker_1308-76137.jpg"
     }
   ];
-  // HTML Linking 
-  const btnFilterCat = document.querySelector("#btn-cat");
-  const btnFilterDino = document.querySelector("#btn-dino");
-  const btnFilterDog = document.querySelector("#btn-dog");
-  const btnFilterAll = document.querySelector("#btn-all");
-  const app = document.querySelector("#app");
-// Filter Buttons
-  const filterByType = (type) => {
-    return pets.filter(pet => pet.type === type)
-  }
-      btnFilterCat.addEventListener('click',() => {
-    const filteredPets = filterByType('Cat');
-    displayPets(filteredPets)
-  })
-      btnFilterDino.addEventListener('click',() => {
-    const filteredPets = filterByType('Dino');
-    displayPets(filteredPets)
-  })
-     btnFilterDog.addEventListener('click',() => {
-    const filteredPets = filterByType('Dog');
-    displayPets(filteredPets)
-  })
-  btnFilterAll.addEventListener('click',() => {
-    displayPets(pets);
-  }) 
-
+ 
+ 
+  //  render cards on the screen
   const displayPets = (array) => {
     let domString = "";
     array.forEach((pet) => {
@@ -284,6 +261,47 @@ const pets = [
     })
     app.innerHTML = domString;
   }
+const app = document.querySelector("#app");
+
+
+  // filters
+  const filterByType = (type) => {
+    return pets.filter(pet => pet.type === type)
+  }
+ 
+    // Cat Button 
+  const btnFilterCat = document.querySelector("#btn-cat");
+    btnFilterCat.addEventListener('click',() => {
+    const filteredPets = filterByType('Cat');
+    displayPets(filteredPets)
+  })
+ 
+  
+  // Dino Button 
+  const btnFilterDino = document.querySelector("#btn-dino");
+    btnFilterDino.addEventListener('click',() => {
+    const filteredPets = filterByType('Dino');
+    displayPets(filteredPets)
+  })
+  
+
+  // Dog Button 
+  const btnFilterDog = document.querySelector("#btn-dog");
+    btnFilterDog.addEventListener('click',() => {
+    const filteredPets = filterByType('Dog');
+    displayPets(filteredPets)
+  })
+ 
+  
+  // Filter All Button 
+  const btnFilterAll = document.querySelector("#btn-all");
+  
+  btnFilterAll.addEventListener('click',() => {
+    displayPets(pets);
+  })
+ 
+  
+  // Delete function 
   const deleteCard = (event) => {
     if(event.target.id.includes("delete")){
       const [, id] = event.target.id.split("--");
@@ -293,9 +311,14 @@ const pets = [
     }
   }
   app.addEventListener("click", deleteCard)
+  
+
+// Form Submit Button 
 const form = document.querySelector('form')
+
   const createCard = (e) => {
     e.preventDefault();
+ 
     const newCard = {
       id: pets.length + 1,
       name: document.querySelector("#animal-name").value,
@@ -303,7 +326,8 @@ const form = document.querySelector('form')
       specialSkill: document.querySelector("#special-skill").value,
       imageUrl: document.querySelector("#formImgUrl").value,
       type: document.querySelector('input[name="flexRadioDefault"]:checked').value,
-    } 
+    }
+    
     pets.push(newCard);
     displayPets(pets);
     form.reset();

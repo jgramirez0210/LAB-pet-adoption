@@ -240,31 +240,10 @@ const pets = [
       imageUrl: "https://img.freepik.com/free-vector/tyrannosaurus-dinosaur-cartoon-character-sticker_1308-76137.jpg"
     }
   ];
-  // HTML Linking 
   const btnFilterCat = document.querySelector("#btn-cat");
   const btnFilterDino = document.querySelector("#btn-dino");
   const btnFilterDog = document.querySelector("#btn-dog");
-  const btnFilterAll = document.querySelector("#btn-all");
-  const app = document.querySelector("#app");
-// Filter Buttons
-  const filterByType = (type) => {
-    return pets.filter(pet => pet.type === type)
-  }
-      btnFilterCat.addEventListener('click',() => {
-    const filteredPets = filterByType('Cat');
-    displayPets(filteredPets)
-  })
-      btnFilterDino.addEventListener('click',() => {
-    const filteredPets = filterByType('Dino');
-    displayPets(filteredPets)
-  })
-     btnFilterDog.addEventListener('click',() => {
-    const filteredPets = filterByType('Dog');
-    displayPets(filteredPets)
-  })
-  btnFilterAll.addEventListener('click',() => {
-    displayPets(pets);
-  }) 
+
 
   const displayPets = (array) => {
     let domString = "";
@@ -284,6 +263,35 @@ const pets = [
     })
     app.innerHTML = domString;
   }
+const app = document.querySelector("#app");
+  // filters
+  const filterByType = (type) => {
+    return pets.filter(pet => pet.type === type)
+  }
+     // Cat Button 
+  
+    btnFilterCat.addEventListener('click',() => {
+    const filteredPets = filterByType('Cat');
+    displayPets(filteredPets)
+  })
+   // Dino Button 
+  
+    btnFilterDino.addEventListener('click',() => {
+    const filteredPets = filterByType('Dino');
+    displayPets(filteredPets)
+  })
+   // Dog Button 
+  
+    btnFilterDog.addEventListener('click',() => {
+    const filteredPets = filterByType('Dog');
+    displayPets(filteredPets)
+  })
+  // Filter All Button 
+  
+  btnFilterAll.addEventListener('click',() => {
+    displayPets(pets);
+  })
+  // Delete function 
   const deleteCard = (event) => {
     if(event.target.id.includes("delete")){
       const [, id] = event.target.id.split("--");
@@ -293,6 +301,7 @@ const pets = [
     }
   }
   app.addEventListener("click", deleteCard)
+// Form Submit Button 
 const form = document.querySelector('form')
   const createCard = (e) => {
     e.preventDefault();

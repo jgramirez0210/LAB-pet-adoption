@@ -246,25 +246,6 @@ const pets = [
   const btnFilterDog = document.querySelector("#btn-dog");
   const btnFilterAll = document.querySelector("#btn-all");
   const app = document.querySelector("#app");
-// Filter Buttons
-  const filterByType = (type) => {
-    return pets.filter(pet => pet.type === type)
-  }
-      btnFilterCat.addEventListener('click',() => {
-    const filteredPets = filterByType('Cat');
-    displayPets(filteredPets)
-  })
-      btnFilterDino.addEventListener('click',() => {
-    const filteredPets = filterByType('Dino');
-    displayPets(filteredPets)
-  })
-     btnFilterDog.addEventListener('click',() => {
-    const filteredPets = filterByType('Dog');
-    displayPets(filteredPets)
-  })
-  btnFilterAll.addEventListener('click',() => {
-    displayPets(pets);
-  }) 
 
   const displayPets = (array) => {
     let domString = "";
@@ -284,6 +265,32 @@ const pets = [
     })
     app.innerHTML = domString;
   }
+;
+  // filters
+  const filterByType = (type) => {
+    return pets.filter(pet => pet.type === type)
+  }
+  
+    btnFilterCat.addEventListener('click',() => {
+    const filteredPets = filterByType('Cat');
+    displayPets(filteredPets)
+  })
+      btnFilterDino.addEventListener('click',() => {
+    const filteredPets = filterByType('Dino');
+    displayPets(filteredPets)
+  })
+   // Dog Button 
+  
+    btnFilterDog.addEventListener('click',() => {
+    const filteredPets = filterByType('Dog');
+    displayPets(filteredPets)
+  })
+  // Filter All Button 
+  
+  btnFilterAll.addEventListener('click',() => {
+    displayPets(pets);
+  })
+  // Delete function 
   const deleteCard = (event) => {
     if(event.target.id.includes("delete")){
       const [, id] = event.target.id.split("--");
@@ -293,6 +300,7 @@ const pets = [
     }
   }
   app.addEventListener("click", deleteCard)
+// Form Submit Button 
 const form = document.querySelector('form')
   const createCard = (e) => {
     e.preventDefault();
