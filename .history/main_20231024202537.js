@@ -61,7 +61,7 @@ const pets = [
       color: "Grey",
       specialSkill: "Comfortable in the outdoors for up to eight hours.",
       type: "Dino",
-      imageUrl: "https://th-thumbnailer.cdn-si-edu.com/kEwIQk8FHCYkZ3oEPQCohGjttZU=/fit-in/1600x0/https%3A%2F%2Ftf-cmsv2-smithsonianmag-media.s3.amazonaws.com%2Ffiler%2Fc4%2F25%2Fc42582e5-40be-43f7-865d-edb356a91e0d%2Fallosaurus_jimmadseni-gray-credit-andrey-atuchin.jpg"
+      imageUrl: "https://i2.pickpik.com/photos/618/305/180/dinosaur-gad-mammal-Dino-preview.jpg"
     },
     {
       id: 9,
@@ -197,7 +197,7 @@ const pets = [
       color: "Red",
       specialSkill: "Knows the words to 4 rap songs.",
       type: "Cat",
-      imageUrl: "https://i.pinimg.com/736x/c9/f2/3e/c9f23e212529f13f19bad5602d84b78b.jpg"
+      imageUrl: "https://image.shutterstock.com/image-photo/womans-hand-stroking-ginger-cat-260nw-2143135507.jpg"
     },
     {
         id: 26,
@@ -241,6 +241,7 @@ const pets = [
     }
   ];
 
+// Filter Buttons
   const filterByType = (type) => {
     return pets.filter(pet => pet.type === type)
   }
@@ -263,7 +264,6 @@ const pets = [
     })
     app.innerHTML = domString;
   }
-  
   const deleteCard = (event) => {
     if(event.target.id.includes("delete")){
       const [, id] = event.target.id.split("--");
@@ -313,11 +313,6 @@ const pets = [
     btnFilterAll.addEventListener('click',() => {
       displayPets(pets);
     }) 
-  }
-
-  const startApp = () => {
-    displayPets(pets);
-    events();
   }
 
   startApp()

@@ -197,7 +197,7 @@ const pets = [
       color: "Red",
       specialSkill: "Knows the words to 4 rap songs.",
       type: "Cat",
-      imageUrl: "https://i.pinimg.com/736x/c9/f2/3e/c9f23e212529f13f19bad5602d84b78b.jpg"
+      imageUrl: "https://image.shutterstock.com/image-photo/womans-hand-stroking-ginger-cat-260nw-2143135507.jpg"
     },
     {
         id: 26,
