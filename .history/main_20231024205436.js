@@ -257,9 +257,8 @@ const displayPets = (array) => {
     <footer>
     <p class="card-subtitle mb-2 text-body-secondary">${pet.type}</p>
     </footer>
-    <button id="delete--${pet.id}">Delete</button>
-    </div>
-    </div>`;
+     <button id="delete--${pet.id}">Delete</button>
+     </div> </div>`;
     })
     app.innerHTML = domString;
   }

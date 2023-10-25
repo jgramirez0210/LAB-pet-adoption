@@ -257,9 +257,9 @@ const displayPets = (array) => {
     <footer>
     <p class="card-subtitle mb-2 text-body-secondary">${pet.type}</p>
     </footer>
-    <button id="delete--${pet.id}">Delete</button>
-    </div>
-    </div>`;
+     <button id="delete--${pet.id}">Delete</button>
+     </div>
+   </div>`;
     })
     app.innerHTML = domString;
   }
@@ -271,54 +271,54 @@ const deleteCard = (event) => {
     pets.splice(index, 1);
     displayPets(pets);
   }
-}
+  }
   
-const createCard = (e) => {
-  e.preventDefault();
-   const newCard = {
-     id: pets.length + 1,
-     name: document.querySelector("#animal-name").value,
-     color: document.querySelector("#animal-color").value,
-     specialSkill: document.querySelector("#special-skill").value,
-     imageUrl: document.querySelector("#formImgUrl").value,
-     type: document.querySelector('input[name="flexRadioDefault"]:checked').value,
-   } 
-  pets.push(newCard);
-  displayPets(pets);
-  form.reset();
-}
+  const createCard = (e) => {
+    e.preventDefault();
+    const newCard = {
+      id: pets.length + 1,
+      name: document.querySelector("#animal-name").value,
+      color: document.querySelector("#animal-color").value,
+      specialSkill: document.querySelector("#special-skill").value,
+      imageUrl: document.querySelector("#formImgUrl").value,
+      type: document.querySelector('input[name="flexRadioDefault"]:checked').value,
+    } 
+    pets.push(newCard);
+    displayPets(pets);
+    form.reset();
+  }
 
 const events = () => {
-  const btnFilterCat = document.querySelector("#btn-cat");
-  const btnFilterDino = document.querySelector("#btn-dino");
-  const btnFilterDog = document.querySelector("#btn-dog");
-  const btnFilterAll = document.querySelector("#btn-all");
-  const app = document.querySelector("#app");
-  const form = document.querySelector("form")
+    const btnFilterCat = document.querySelector("#btn-cat");
+    const btnFilterDino = document.querySelector("#btn-dino");
+    const btnFilterDog = document.querySelector("#btn-dog");
+    const btnFilterAll = document.querySelector("#btn-all");
+    const app = document.querySelector("#app");
+    const form = document.querySelector("form")
 
-  form.addEventListener('submit', createCard)
-  app.addEventListener("click", deleteCard)
+    form.addEventListener('submit', createCard)
+    app.addEventListener("click", deleteCard)
    
-  btnFilterCat.addEventListener('click',() => {
-    const filteredPets = filterByType('Cat');
-    displayPets(filteredPets)
-  })
-  btnFilterDino.addEventListener('click',() => {
-    const filteredPets = filterByType('Dino');
-    displayPets(filteredPets)
-  })
-  btnFilterDog.addEventListener('click',() => {
-    const filteredPets = filterByType('Dog');
-    displayPets(filteredPets)
-  })
-  btnFilterAll.addEventListener('click',() => {
-    displayPets(pets);
-  }) 
+    btnFilterCat.addEventListener('click',() => {
+      const filteredPets = filterByType('Cat');
+      displayPets(filteredPets)
+    })
+    btnFilterDino.addEventListener('click',() => {
+      const filteredPets = filterByType('Dino');
+      displayPets(filteredPets)
+    })
+    btnFilterDog.addEventListener('click',() => {
+      const filteredPets = filterByType('Dog');
+      displayPets(filteredPets)
+    })
+    btnFilterAll.addEventListener('click',() => {
+      displayPets(pets);
+    }) 
   }
   
 const startApp = () => {
-  displayPets(pets);
-  events();
+    displayPets(pets);
+    events();
   }
   
   startApp()
