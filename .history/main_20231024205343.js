@@ -257,9 +257,9 @@ const displayPets = (array) => {
     <footer>
     <p class="card-subtitle mb-2 text-body-secondary">${pet.type}</p>
     </footer>
-    <button id="delete--${pet.id}">Delete</button>
-    </div>
-    </div>`;
+     <button id="delete--${pet.id}">Delete</button>
+     </div>
+   </div>`;
     })
     app.innerHTML = domString;
   }
@@ -296,29 +296,29 @@ const events = () => {
   const app = document.querySelector("#app");
   const form = document.querySelector("form")
 
-  form.addEventListener('submit', createCard)
-  app.addEventListener("click", deleteCard)
+    form.addEventListener('submit', createCard)
+    app.addEventListener("click", deleteCard)
    
-  btnFilterCat.addEventListener('click',() => {
-    const filteredPets = filterByType('Cat');
-    displayPets(filteredPets)
-  })
-  btnFilterDino.addEventListener('click',() => {
-    const filteredPets = filterByType('Dino');
-    displayPets(filteredPets)
-  })
-  btnFilterDog.addEventListener('click',() => {
-    const filteredPets = filterByType('Dog');
-    displayPets(filteredPets)
-  })
-  btnFilterAll.addEventListener('click',() => {
-    displayPets(pets);
-  }) 
+    btnFilterCat.addEventListener('click',() => {
+      const filteredPets = filterByType('Cat');
+      displayPets(filteredPets)
+    })
+    btnFilterDino.addEventListener('click',() => {
+      const filteredPets = filterByType('Dino');
+      displayPets(filteredPets)
+    })
+    btnFilterDog.addEventListener('click',() => {
+      const filteredPets = filterByType('Dog');
+      displayPets(filteredPets)
+    })
+    btnFilterAll.addEventListener('click',() => {
+      displayPets(pets);
+    }) 
   }
   
 const startApp = () => {
-  displayPets(pets);
-  events();
+    displayPets(pets);
+    events();
   }
   
   startApp()
